@@ -1,1 +1,1412 @@
-:root{--ink:#090811;--surface:#12101d;--violet:#7c4dff;--emerald:#4ee6a1;--gold:#d7b66a;--magenta:#d75aa6;--text:#eeeaf5;--muted:#aaa4b8;--line:rgba(215,182,106,.42)}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#21163e 0%,var(--ink) 54%);color:var(--text);font-family:"DM Sans",sans-serif}.app-shell{position:relative;z-index:1;display:grid;place-items:center;min-height:100vh;padding:24px}.screen{width:min(100%,760px);animation:arrive .65s ease both}.panel{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(27,22,44,.94),rgba(10,9,19,.96));border:1px solid var(--line);border-radius:22px;padding:clamp(28px,5vw,54px);box-shadow:0 30px 80px #0009,inset 0 1px #ffffff12}.panel:before{content:"";position:absolute;inset:8px;border:1px solid #d7b66a25;border-radius:15px;pointer-events:none}.eyebrow{font:600 .73rem/1 "Cinzel",serif;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin:0 0 14px}.title{font:700 clamp(1.8rem,5vw,3.2rem)/1.12 "Cinzel",serif;text-align:center;margin:0;color:#fff8e5;text-shadow:0 0 30px #7c4dff77}.subtitle{font:500 clamp(.92rem,2vw,1.08rem)/1.5 "Cinzel",serif;color:var(--gold);text-align:center;margin:10px 0 0}.lead{text-align:center;color:var(--muted);font-size:1.08rem;line-height:1.65}.portal-screen{text-align:center}.portal{cursor:pointer;position:relative;width:min(65vw,310px);aspect-ratio:1;border:0;border-radius:50%;background:radial-gradient(circle,#0c1725 18%,#1e1244 36%,#7c4dff70 53%,#4ee6a130 67%,transparent 69%);margin:30px auto;color:var(--text);filter:drop-shadow(0 0 26px #7c4dff88);transition:transform .45s,filter .45s}.portal:hover,.portal:focus-visible{transform:scale(1.06);filter:drop-shadow(0 0 38px #4ee6a1)}.portal:before,.portal:after{content:"✦ ᚨ ᛟ ᛞ ᚱ ᛃ ᛇ ᚲ  ✦";position:absolute;inset:13px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:600 .9rem "Cinzel";letter-spacing:.15em;color:#e9d69e;animation:spin 25s linear infinite}.portal:after{inset:31px;border-color:var(--emerald);opacity:.65;animation-direction:reverse;animation-duration:18s}.portal.opening{animation:portalOpen .8s ease-in forwards}.btn{position:relative;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:9px;width:100%;min-height:52px;border:1px solid var(--gold);border-radius:10px;background:linear-gradient(135deg,#36255d,#171326);color:#fff7e0;font:600 .82rem "Cinzel",serif;letter-spacing:.04em;padding:13px 20px;transition:.25s}.btn:hover,.btn:focus-visible{background:#4c347f;box-shadow:0 0 23px #7c4dff88;outline:2px solid var(--emerald);outline-offset:3px}.btn.secondary{border-color:#ffffff3b;background:#ffffff0a;color:var(--text)}.btn.danger{border-color:#d75aa677;color:#f3c3de}.button-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}.lore{line-height:1.75;color:#d5cfe0;white-space:pre-line;font-size:1.02rem}.lore strong{font-family:"Cinzel";color:#f9e5a9}.question-number{color:var(--gold);font:600 .78rem "Cinzel";letter-spacing:.1em}.progress{height:6px;background:#ffffff12;border-radius:9px;margin:14px 0 32px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--emerald));transition:width .35s}.question{font:600 clamp(1.25rem,3vw,1.75rem)/1.38 "Cinzel";margin:0 0 22px}.choices{display:grid;gap:12px}.choice{cursor:pointer;text-align:left;padding:17px;border:1px solid #ffffff25;border-radius:12px;background:#ffffff08;color:var(--text);font:400 1rem/1.45 "DM Sans";transition:.2s}.choice:hover,.choice:focus-visible,.choice.selected{border-color:var(--emerald);background:#4ee6a119;outline:none}.choice.selected:before{content:"✦ ";color:var(--gold)}.nav{display:flex;gap:12px;margin-top:28px}.nav .btn{flex:1}.field{display:grid;gap:9px;margin:26px 0}.field label{font:600 .85rem "Cinzel";color:var(--gold)}input{width:100%;border:1px solid #ffffff35;border-radius:10px;background:#080713;color:#fff;padding:15px;font:1rem "DM Sans"}input:focus{outline:2px solid var(--emerald);border-color:transparent}.notice{margin:20px 0;padding:12px 14px;border-left:3px solid var(--emerald);background:#4ee6a110;color:#c5f6df;font-size:.9rem}.reveal{text-align:center}.reveal-icon{font-size:4.5rem;filter:drop-shadow(0 0 18px #d7b66a99);margin:15px}.class-name{font:700 clamp(1.5rem,4vw,2.4rem) "Cinzel";color:#fff0bd}.order-emblem{position:relative;margin:28px auto 15px;width:150px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;border:2px solid var(--gold);background:radial-gradient(circle,#271949,#0b0914 68%);font-size:4rem;box-shadow:0 0 25px #7c4dff88}.order-emblem:before{content:"✦  ✧  ⋆  ✦  ✧  ⋆";font:700 .95rem "Cinzel";position:absolute;inset:8px;border:1px solid #d7b66a99;border-radius:50%;display:grid;place-items:center;color:var(--gold);letter-spacing:1.15em}.order-emblem.trail{border-color:#b8dcd2;background:radial-gradient(circle,#123c37,#0b0914 68%);box-shadow:0 0 25px #4ee6a188}.order-emblem.trail:before{content:"✦  ·  ✧  ⁕  ⋆  ·";color:#d8fbf3;border-color:#b8dcd299}.order-name{font:700 1.1rem/1.35 "Cinzel";color:var(--gold);margin:0}.motto{color:var(--muted);font-style:italic}.final .panel{padding:28px}.adventure-grid{display:grid;gap:14px;margin:25px 0}.adventurer{border:1px solid #ffffff25;border-radius:12px;padding:18px;background:#ffffff08}.adventurer h3{margin:0 0 10px;font:600 1.12rem "Cinzel";color:#fff5d5}.adventurer p{margin:5px 0;color:var(--muted)}.event-details{border-top:1px solid var(--line);padding-top:22px;display:grid;gap:11px;color:#e3ddea}.footer-buttons{display:grid;gap:12px;margin-top:24px}.toast{position:fixed;z-index:5;left:50%;bottom:22px;transform:translate(-50%,140%);width:min(92vw,480px);padding:14px 18px;background:#1c1830;border:1px solid var(--gold);border-radius:10px;color:#fff;text-align:center;box-shadow:0 10px 30px #0009;transition:.35s}.toast.show{transform:translate(-50%,0)}.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none}.ambient i{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.5;box-shadow:0 0 12px 3px var(--violet);animation:drift 12s infinite ease-in-out}.ambient i:nth-child(1){left:12%;top:17%}.ambient i:nth-child(2){left:82%;top:24%;animation-delay:-3s;background:var(--emerald)}.ambient i:nth-child(3){left:70%;top:79%;animation-delay:-7s}.ambient i:nth-child(4){left:20%;top:72%;animation-delay:-2s;background:var(--gold)}.ambient i:nth-child(5){left:50%;top:9%;animation-delay:-5s}.ambient i:nth-child(6){left:91%;top:58%;animation-delay:-9s;background:var(--emerald)}#pdf-source{padding:8px;background:#090811}@keyframes spin{to{transform:rotate(360deg)}}@keyframes drift{50%{transform:translate(25px,-35px);opacity:1}}@keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes portalOpen{to{transform:scale(2.8);opacity:0;filter:brightness(2) blur(5px)}}@media(max-width:560px){.app-shell{padding:14px}.panel{padding:27px 21px;border-radius:17px}.button-row{grid-template-columns:1fr}.lore{font-size:.95rem}.nav{flex-direction:column-reverse}.nav .btn{width:100%}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* ==================================================
+   LA GRAN EXPEDICIÓN
+   Hoja de estilos principal
+================================================== */
+
+
+/* ==================================================
+   1. VARIABLES Y PALETA
+================================================== */
+
+:root {
+  /* Fondos */
+  --ink: #090811;
+  --surface: #12101d;
+  --surface-light: #1b1728;
+
+  /* Magia rosa */
+  --rose-dark: #54182f;
+  --rose-deep: #8f2f58;
+  --rose: #c94f82;
+  --rose-light: #e67aa5;
+  --rose-soft: #f0a2be;
+
+  /* Acentos */
+  --emerald: #4ee6a1;
+  --gold: #d7b66a;
+
+  /* Texto */
+  --text: #eeeaf5;
+  --muted: #aaa4b8;
+
+  /* Bordes */
+  --line: rgba(215, 182, 106, 0.42);
+  --rose-line: rgba(201, 79, 130, 0.42);
+
+  /* Tipografías */
+  --font-title: "Cinzel Decorative", "Cinzel", serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-hand: "Caveat", cursive;
+}
+
+
+/* ==================================================
+   2. RESET Y ESTILOS GENERALES
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      #321323 0%,
+      #17101d 36%,
+      var(--ink) 70%
+    );
+
+  color: var(--text);
+
+  font-family: var(--font-serif);
+
+  font-size: 1.08rem;
+
+  letter-spacing: 0.01em;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+
+  padding: 24px;
+}
+
+.screen {
+  width: min(100%, 760px);
+
+  animation: arrive 0.65s ease both;
+}
+
+
+/* ==================================================
+   3. PANEL PRINCIPAL
+================================================== */
+
+.panel {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(28px, 5vw, 54px);
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(34, 18, 30, 0.96),
+      rgba(10, 9, 19, 0.98)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    0 0 50px rgba(143, 47, 88, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.panel::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid rgba(215, 182, 106, 0.14);
+  border-radius: 15px;
+
+  pointer-events: none;
+}
+
+.panel::after {
+  content: "✦";
+
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  color: var(--rose-light);
+
+  font-size: 0.8rem;
+
+  opacity: 0.65;
+
+  text-shadow:
+    0 0 12px var(--rose);
+}
+
+
+/* ==================================================
+   4. TIPOGRAFÍA
+================================================== */
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  color: var(--gold);
+
+  font-family: "Cinzel", serif;
+  font-size: 0.73rem;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  color: #fff7e8;
+
+  font-family: var(--font-title);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  text-shadow:
+    0 0 18px rgba(201, 79, 130, 0.45),
+    0 0 40px rgba(143, 47, 88, 0.25);
+}
+
+.subtitle {
+  margin: 12px 0 0;
+
+  color: var(--gold);
+
+  font-family: var(--font-hand);
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  text-align: center;
+}
+
+.lead {
+  color: var(--muted);
+
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* ==================================================
+   5. PORTAL MÍSTICO
+================================================== */
+
+.portal-screen {
+  text-align: center;
+}
+
+.portal {
+  position: relative;
+
+  width: min(65vw, 310px);
+
+  aspect-ratio: 1;
+
+  margin: 30px auto;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle,
+      #120914 0%,
+      #25101f 20%,
+      rgba(143, 47, 88, 0.92) 36%,
+      rgba(201, 79, 130, 0.88) 49%,
+      rgba(230, 122, 165, 0.42) 61%,
+      transparent 72%
+    );
+
+  box-shadow:
+    0 0 18px rgba(230, 122, 165, 0.95),
+    0 0 45px rgba(201, 79, 130, 0.8),
+    0 0 85px rgba(143, 47, 88, 0.62),
+    inset 0 0 28px rgba(255, 170, 210, 0.28);
+
+  filter:
+    drop-shadow(
+      0 0 22px
+      rgba(230, 122, 165, 0.85)
+    );
+
+  animation:
+    portalPulse 3.2s ease-in-out infinite;
+
+  transition:
+    transform 0.45s,
+    filter 0.45s,
+    box-shadow 0.45s;
+}
+.portal:hover,
+.portal:focus-visible {
+  transform: scale(1.07);
+
+  box-shadow:
+    0 0 25px rgba(255, 190, 220, 1),
+    0 0 60px rgba(230, 122, 165, 0.95),
+    0 0 110px rgba(201, 79, 130, 0.8),
+    inset 0 0 35px rgba(255, 190, 220, 0.4);
+
+  filter:
+    drop-shadow(
+      0 0 38px
+      rgba(255, 150, 205, 1)
+    );
+}
+
+.portal::before,
+.portal::after {
+  content:
+    "✦ ᚨ ᛟ ᛞ ᚱ ᛃ ᛇ ᚲ ✦";
+
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+
+  color: #ead9a7;
+
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  animation:
+    spin 25s linear infinite;
+}
+
+.portal::before {
+  inset: 13px;
+}
+
+.portal::after {
+  inset: 31px;
+
+  border-color: var(--rose-light);
+
+  color: var(--rose-soft);
+
+  opacity: 0.7;
+
+  animation-direction: reverse;
+  animation-duration: 18s;
+}
+
+.portal.opening {
+  animation:
+    portalOpen 0.8s ease-in forwards;
+}
+
+
+/* ==================================================
+   6. BOTONES
+================================================== */
+
+.btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 100%;
+  min-height: 52px;
+
+  padding: 13px 20px;
+
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: #fff7e8;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5a1d3b,
+      #21111d
+    );
+
+  font-family: "Cinzel", serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  transition:
+    transform 0.2s,
+    background 0.25s,
+    box-shadow 0.25s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b294f,
+      #321323
+    );
+
+  box-shadow:
+    0 0 24px
+    rgba(201, 79, 130, 0.52);
+
+  outline:
+    2px solid var(--rose-light);
+
+  outline-offset: 3px;
+}
+
+.btn.secondary {
+  border-color: rgba(255, 255, 255, 0.23);
+
+  color: var(--text);
+
+  background:
+    rgba(255, 255, 255, 0.05);
+}
+
+.btn.secondary:hover {
+  background:
+    rgba(201, 79, 130, 0.13);
+}
+
+.btn.danger {
+  border-color:
+    rgba(215, 90, 166, 0.48);
+
+  color:
+    #f3c3de;
+
+  background:
+    rgba(215, 90, 166, 0.06);
+}
+
+.button-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+/* ==================================================
+   7. LORE
+================================================== */
+
+.lore {
+  color: #ddd3e2;
+
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+
+  line-height: 1.72;
+
+  white-space: pre-line;
+}
+
+.lore strong {
+  color: #ffe8ae;
+
+  font-family: "Cinzel", serif;
+}
+
+
+/* ==================================================
+   8. TEST Y PROGRESO
+================================================== */
+
+.question-number {
+  color: var(--gold);
+
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+.progress {
+  height: 6px;
+
+  margin:
+    14px 0 32px;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+.progress i {
+  display: block;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--rose-deep),
+      var(--rose-light),
+      var(--emerald)
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(230, 122, 165, 0.7);
+
+  transition:
+    width 0.35s;
+}
+
+.question {
+  margin:
+    0 0 22px;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    clamp(1.55rem, 3vw, 2rem);
+
+  font-weight: 600;
+
+  line-height: 1.28;
+}
+
+.choices {
+  display: grid;
+
+  gap: 12px;
+}
+
+.choice {
+  padding: 17px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  color: var(--text);
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  font-family:
+    var(--font-serif);
+
+  font-size: 1.13rem;
+
+  line-height: 1.4;
+
+  text-align: left;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+
+.choice:hover,
+.choice:focus-visible {
+  transform:
+    translateX(3px);
+
+  border-color:
+    var(--rose-light);
+
+  background:
+    rgba(201, 79, 130, 0.1);
+
+  outline: none;
+}
+
+.choice.selected {
+  border-color:
+    var(--rose-light);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(201, 79, 130, 0.2),
+      rgba(201, 79, 130, 0.06)
+    );
+
+  box-shadow:
+    0 0 18px
+    rgba(201, 79, 130, 0.12);
+}
+
+.choice.selected::before {
+  content:
+    "✦ ";
+
+  color:
+    var(--gold);
+}
+
+.nav {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.nav .btn {
+  flex: 1;
+}
+
+
+/* ==================================================
+   9. FORMULARIOS
+================================================== */
+
+.field {
+  display: grid;
+
+  gap: 9px;
+
+  margin:
+    26px 0;
+}
+
+.field label {
+  color:
+    var(--gold);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    0.85rem;
+
+  font-weight:
+    600;
+}
+
+input {
+  width: 100%;
+
+  padding: 15px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius:
+    10px;
+
+  color:
+    #fff;
+
+  background:
+    #090711;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    1.2rem;
+}
+
+input:focus {
+  border-color:
+    transparent;
+
+  outline:
+    2px solid
+    var(--rose-light);
+
+  box-shadow:
+    0 0 16px
+    rgba(201, 79, 130, 0.22);
+}
+
+.notice {
+  margin:
+    20px 0;
+
+  padding:
+    12px 14px;
+
+  border-left:
+    3px solid
+    var(--emerald);
+
+  color:
+    #c5f6df;
+
+  background:
+    rgba(78, 230, 161, 0.06);
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    1rem;
+}
+
+
+/* ==================================================
+   10. REVELACIÓN DE CLASE
+================================================== */
+
+.reveal {
+  text-align:
+    center;
+}
+
+.reveal-icon {
+  margin:
+    15px;
+
+  font-size:
+    4.5rem;
+
+  filter:
+    drop-shadow(
+      0 0 18px
+      rgba(215, 182, 106, 0.6)
+    );
+}
+
+.class-name {
+  color:
+    #fff0c5;
+
+  font-family:
+    var(--font-title);
+
+  font-size:
+    clamp(1.5rem, 4vw, 2.3rem);
+
+  font-weight:
+    700;
+}
+
+
+/* ==================================================
+   11. ÓRDENES
+================================================== */
+
+.order-emblem {
+  position:
+    relative;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    150px;
+
+  aspect-ratio:
+    1;
+
+  margin:
+    28px auto 15px;
+
+  border:
+    2px solid
+    var(--gold);
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #4a1730,
+      #0b0914 68%
+    );
+
+  font-size:
+    4rem;
+
+  box-shadow:
+    0 0 28px
+    rgba(201, 79, 130, 0.5);
+}
+
+.order-emblem::before {
+  content:
+    "✦ ✧ ⋆ ✦ ✧ ⋆";
+
+  position:
+    absolute;
+
+  inset:
+    8px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(215, 182, 106, 0.6);
+
+  border-radius:
+    50%;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    0.95rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.15em;
+}
+
+.order-emblem.trail {
+  border-color:
+    #b8dcd2;
+
+  background:
+    radial-gradient(
+      circle,
+      #123c37,
+      #0b0914 68%
+    );
+
+  box-shadow:
+    0 0 25px
+    rgba(78, 230, 161, 0.5);
+}
+
+.order-emblem.trail::before {
+  content:
+    "✦ · ✧ ⁕ ⋆ ·";
+
+  color:
+    #d8fbf3;
+
+  border-color:
+    rgba(184, 220, 210, 0.6);
+}
+
+.order-name {
+  margin:
+    0;
+
+  color:
+    var(--gold);
+
+  font-family:
+    var(--font-title);
+
+  font-size:
+    1.05rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.4;
+}
+
+.motto {
+  color:
+    var(--rose-soft);
+
+  font-family:
+    var(--font-hand);
+
+  font-size:
+    1.3rem;
+
+  font-style:
+    normal;
+}
+
+
+/* ==================================================
+   12. PANTALLA FINAL
+================================================== */
+
+.final .panel {
+  padding:
+    28px;
+}
+
+.adventure-grid {
+  display:
+    grid;
+
+  gap:
+    14px;
+
+  margin:
+    25px 0;
+}
+
+.adventurer {
+  padding:
+    18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius:
+    12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(201, 79, 130, 0.08),
+      rgba(255, 255, 255, 0.035)
+    );
+}
+
+.adventurer h3 {
+  margin:
+    0 0 10px;
+
+  color:
+    #fff5d5;
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    1.12rem;
+
+  font-weight:
+    600;
+}
+
+.adventurer p {
+  margin:
+    5px 0;
+
+  color:
+    var(--muted);
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    1.08rem;
+}
+
+.event-details {
+  display:
+    grid;
+
+  gap:
+    11px;
+
+  padding-top:
+    22px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  color:
+    #e7dfe9;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    1.15rem;
+}
+
+.footer-buttons {
+  display:
+    grid;
+
+  gap:
+    12px;
+
+  margin-top:
+    24px;
+}
+
+
+/* ==================================================
+   13. PROVISIONES DE LA EXPEDICIÓN
+================================================== */
+
+.provisions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    16px;
+
+  margin-top:
+    22px;
+
+  padding:
+    17px 18px;
+
+  border:
+    1px solid
+    rgba(215, 90, 166, 0.45);
+
+  border-left:
+    4px solid
+    var(--rose);
+
+  border-radius:
+    12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(215, 90, 166, 0.12),
+      rgba(10, 9, 19, 0.45)
+    );
+
+  box-shadow:
+    inset 0 1px
+    rgba(255, 255, 255, 0.05),
+
+    0 0 22px
+    rgba(215, 90, 166, 0.08);
+}
+
+.provisions-icon {
+  font-size:
+    2rem;
+
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(215, 90, 166, 0.55)
+    );
+}
+
+.provisions h3 {
+  margin:
+    0 0 5px;
+
+  color:
+    var(--rose-soft);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    0.85rem;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+.provisions p {
+  margin:
+    0;
+
+  color:
+    #d8d0dc;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    1.05rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* ==================================================
+   14. TOAST
+================================================== */
+
+.toast {
+  position:
+    fixed;
+
+  z-index:
+    5;
+
+  left:
+    50%;
+
+  bottom:
+    22px;
+
+  width:
+    min(92vw, 480px);
+
+  padding:
+    14px 18px;
+
+  border:
+    1px solid
+    var(--gold);
+
+  border-radius:
+    10px;
+
+  color:
+    #fff;
+
+  background:
+    #1c1320;
+
+  font-family:
+    var(--font-serif);
+
+  text-align:
+    center;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.6);
+
+  transform:
+    translate(-50%, 140%);
+
+  transition:
+    0.35s;
+}
+
+.toast.show {
+  transform:
+    translate(-50%, 0);
+}
+
+
+/* ==================================================
+   15. PARTÍCULAS AMBIENTALES
+================================================== */
+
+.ambient {
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  overflow:
+    hidden;
+
+  pointer-events:
+    none;
+}
+
+.ambient i {
+  position:
+    absolute;
+
+  width:
+    4px;
+
+  height:
+    4px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--rose-light);
+
+  opacity:
+    0.55;
+
+  box-shadow:
+    0 0 12px 3px
+    var(--rose);
+
+  animation:
+    drift 12s infinite ease-in-out;
+}
+
+.ambient i:nth-child(1) {
+  left: 12%;
+  top: 17%;
+}
+
+.ambient i:nth-child(2) {
+  left: 82%;
+  top: 24%;
+
+  background:
+    var(--emerald);
+
+  animation-delay:
+    -3s;
+}
+
+.ambient i:nth-child(3) {
+  left: 70%;
+  top: 79%;
+
+  animation-delay:
+    -7s;
+}
+
+.ambient i:nth-child(4) {
+  left: 20%;
+  top: 72%;
+
+  background:
+    var(--gold);
+
+  animation-delay:
+    -2s;
+}
+
+.ambient i:nth-child(5) {
+  left: 50%;
+  top: 9%;
+
+  animation-delay:
+    -5s;
+}
+
+.ambient i:nth-child(6) {
+  left: 91%;
+  top: 58%;
+
+  background:
+    var(--rose-soft);
+
+  animation-delay:
+    -9s;
+}
+
+
+/* ==================================================
+   16. ÁREA DE EXPORTACIÓN PDF
+================================================== */
+
+#pdf-source {
+  padding:
+    8px;
+
+  background:
+    var(--ink);
+}
+
+
+/* ==================================================
+   17. ANIMACIONES
+================================================== */
+
+@keyframes spin {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+@keyframes drift {
+  50% {
+    opacity:
+      1;
+
+    transform:
+      translate(25px, -35px);
+  }
+}
+
+@keyframes arrive {
+  from {
+    opacity:
+      0;
+
+    transform:
+      translateY(16px);
+  }
+
+  to {
+    opacity:
+      1;
+
+    transform:
+      none;
+  }
+}
+
+@keyframes portalOpen {
+  to {
+    opacity:
+      0;
+
+    filter:
+      brightness(2)
+      blur(5px);
+
+    transform:
+      scale(2.8);
+  }
+}
+@keyframes portalPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 18px rgba(230, 122, 165, 0.8),
+      0 0 45px rgba(201, 79, 130, 0.65),
+      0 0 85px rgba(143, 47, 88, 0.48),
+      inset 0 0 28px rgba(255, 170, 210, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 0 28px rgba(255, 180, 215, 1),
+      0 0 70px rgba(230, 122, 165, 0.9),
+      0 0 120px rgba(201, 79, 130, 0.72),
+      inset 0 0 40px rgba(255, 190, 220, 0.38);
+  }
+}
+
+
+/* ==================================================
+   18. RESPONSIVE
+================================================== */
+
+@media (max-width: 560px) {
+
+  .app-shell {
+    padding:
+      14px;
+  }
+
+  .panel {
+    padding:
+      27px 21px;
+
+    border-radius:
+      17px;
+  }
+
+  .button-row {
+    grid-template-columns:
+      1fr;
+  }
+
+  .lore {
+    font-size:
+      1.05rem;
+  }
+
+  .nav {
+    flex-direction:
+      column-reverse;
+  }
+
+  .nav .btn {
+    width:
+      100%;
+  }
+
+  .provisions {
+    align-items:
+      flex-start;
+  }
+
+  .title {
+    font-size:
+      1.7rem;
+  }
+
+  .question {
+    font-size:
+      1.55rem;
+  }
+}
+
+
+/* ==================================================
+   19. MOVIMIENTO REDUCIDO
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior:
+      auto !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+}
