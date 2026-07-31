@@ -1492,3 +1492,28 @@ input:focus {
       drop-shadow(0 0 18px #00b38a);
 
 }
+/* =========================================================
+   FECHA DE LA GRAN EXPEDICIÓN
+   ========================================================= */
+
+.event-date {
+  margin: 18px 0 10px;
+
+  color: #f0a2be;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 12px
+    rgba(240, 162, 190, 0.45);
+}

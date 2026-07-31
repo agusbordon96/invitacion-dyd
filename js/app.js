@@ -195,19 +195,25 @@ function lore() {
 function attendance() {
   render(`
     <section class="screen">
-
       <div class="panel">
 
         <p class="eyebrow">
-          La ruta se abre
+          La Gran Expedición
+        </p>
+
+        <p class="event-date">
+          ✦ Viernes 7 de Agosto ✦
         </p>
 
         <h2 class="title">
-          ¿Emprenderás el viaje acompañado?
+          ¿Te unirás a la aventura?
         </h2>
 
-        <div class="button-row">
+        <p class="lead">
+          La Custodia espera conocer quiénes responderán al llamado.
+        </p>
 
+        <div class="button-row">
           ${button(
             "Viajaré solo",
             "solo"
@@ -218,11 +224,9 @@ function attendance() {
             "pair",
             "secondary"
           )}
-
         </div>
 
       </div>
-
     </section>
   `);
 }
