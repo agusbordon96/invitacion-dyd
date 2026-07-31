@@ -1,25 +1,168 @@
 <!doctype html>
+
 <html lang="es">
+
 <head>
+
+  <!-- =====================================================
+       CONFIGURACIÓN BÁSICA
+       ===================================================== -->
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090811">
-  <title>La Gran Expedición — La Convocatoria del Huevo Primigenio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#090811"
+  >
+
+  <title>
+    La Gran Expedición —
+    La Convocatoria del Huevo Primigenio
+  </title>
+
+
+  <!-- =====================================================
+       TIPOGRAFÍAS
+       ===================================================== -->
+
+  <!-- Conexión anticipada con Google Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+
+  <!-- Fuentes utilizadas en la convocatoria -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       ESTILOS
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
+
 </head>
+
+
 <body>
-  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-  <main id="app" class="app-shell" aria-live="polite"></main>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <!-- =====================================================
+       PARTÍCULAS Y AMBIENTE MÁGICO
+       ===================================================== -->
+
+  <div
+    class="ambient"
+    aria-hidden="true"
+  >
+
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+
+  </div>
+
+
+  <!-- =====================================================
+       APLICACIÓN PRINCIPAL
+
+       El contenido de cada pantalla se genera desde:
+       js/app.js
+       ===================================================== -->
+
+  <main
+    id="app"
+    class="app-shell"
+    aria-live="polite"
+  >
+  </main>
+
+  <!-- =====================================================
+       MENSAJES EMERGENTES
+
+       Se utiliza para avisos, errores y confirmaciones.
+       ===================================================== -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  >
+
+  </div>
+
+  <!-- =====================================================
+       LIBRERÍAS PARA GENERAR EL PDF
+       ===================================================== -->
+
+  <!-- Convierte el contenido HTML en una imagen -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+  ></script>
+
+
+  <!-- Genera el archivo PDF descargable -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       ARCHIVOS JAVASCRIPT
+
+       El orden es importante:
+
+       1. Configuración general
+       2. Preguntas y clases
+       3. Conexión con la base de datos
+       4. Generación del PDF
+       5. Funcionamiento principal
+       ===================================================== -->
+
+  <!-- Configuración del evento -->
   <script src="js/config.js"></script>
+
+
+  <!-- Test de clases -->
   <script src="js/quiz.js"></script>
+
+
+  <!-- Conexión con la Custodia -->
   <script src="js/api.js"></script>
+
+
+  <!-- Generador de la convocatoria -->
   <script src="js/pdf.js"></script>
+
+
+  <!-- Aplicación principal -->
   <script src="js/app.js"></script>
+
 </body>
+
 </html>

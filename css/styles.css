@@ -1410,3 +1410,85 @@ input:focus {
       0.01ms !important;
   }
 }
+
+/* =========================================================
+   EMBLEMAS DE LAS ÓRDENES
+   ========================================================= */
+
+.dinosaur-emblem {
+  position: relative;
+  z-index: 2;
+
+  width: 80%;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+
+  image-rendering: pixelated;
+
+  transition: transform .25s ease,
+              filter .25s ease;
+}
+
+
+/* Silueta principal */
+
+.dino-body {
+  fill: #f0a2be;
+
+  stroke:
+    rgba(255, 225, 238, 0.75);
+
+  stroke-width: 1.2;
+
+  stroke-linejoin: round;
+}
+
+
+/* Detalles de la criatura */
+
+.dino-detail {
+  fill: #8f2f58;
+
+  opacity: 0.95;
+}
+
+
+/* Ojo brillante */
+
+.dino-eye {
+  fill: #fff5dc;
+
+  filter:
+    drop-shadow(
+      0 0 3px
+      rgba(255, 255, 255, 0.9)
+    );
+}
+
+
+/* Primer Rugido:
+   brillo más intenso */
+
+.order-emblem:not(.trail)
+.dinosaur-emblem{
+
+    filter:
+      drop-shadow(0 0 8px #ff2d8f)
+      drop-shadow(0 0 18px #7d2cff);
+
+}
+
+
+/* Última Huella:
+   brillo suave y antiguo */
+
+.order-emblem.trail
+.dinosaur-emblem{
+
+    filter:
+      drop-shadow(0 0 8px #31ffc6)
+      drop-shadow(0 0 18px #00b38a);
+
+}
